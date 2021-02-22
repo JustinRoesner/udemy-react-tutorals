@@ -19,4 +19,7 @@ Spinner is loaded if the location isn't allowed to be passed in by the user.
 Once the location is accepted the site is rendered either summer or winter-themed. 
 
 ### `4 pics`
+<img src="/screenshot_4_pics.png" alt="after searching a word on search bar displays grid of pictures"/>
 This website has a search bar and when you hit enter it will display tiled images of the searched item.
+
+### `work in progress`
