@@ -3,6 +3,7 @@ import React from 'react';
 //import axios from 'axios';
 import unsplash from '../api/unsplash';
 import SearchBar from './SearchBar';
+import ImageList from './ImageList';
 
 class App extends React.Component {
     //default to be empty array since i expect and array
@@ -25,6 +26,7 @@ class App extends React.Component {
         <div className="ui container" style={{ marginTop: '10px' }}>
           <SearchBar onSubmit={this.onSearchSubmit}/>
           Found: {this.state.images.length} images
+          <ImageList images={this.state.images} />
         </div>
     );
     }
