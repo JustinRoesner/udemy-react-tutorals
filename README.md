@@ -23,5 +23,6 @@ Once the location is accepted the site is rendered either summer or winter-theme
 This website has a search bar and when you hit enter it will display tiled images of the searched item.
 
 ### `5 videos`
+<img src="/screenshot_5_videos.png" alt="after searching a word on search bar displays videos from youtube api"/>
 Website that works similar to youtube.
 
