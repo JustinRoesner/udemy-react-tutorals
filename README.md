@@ -26,3 +26,6 @@ This website has a search bar and when you hit enter it will display tiled image
 <img src="/screenshot_5_videos.png" alt="after searching a word on search bar displays videos from youtube api"/>
 Website that works similar to youtube.
 
+### `6 widgets`
+Multi paged widgets that make use of hooks.
+
