@@ -1,21 +1,29 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-const Dropdown = ( {options, selected, onSelectedChange} ) => { 
+const Dropdown = ( { label, options, selected, onSelectedChange } ) => { 
     const [open, setOpen] = useState(false);
     const ref = useRef();
 
     //where ever i click print click not just dropdown
     useEffect(() => {
-        document.body.addEventListener('click', (event) => {
-            if(ref.current && ref.current.contains(event.target)){
-                return;
-            }
-            //console.log(event.target);
-            setOpen(false);
-            //manual document event handler gets called first then most child of react events then bubble up
-            //console.log('body click');
-        });
+        const onBodyClick = (event) => {
+                if(ref.current && ref.current.contains(event.target)){
+                    return;
+                }
+                //console.log(event.target);
+                setOpen(false);
+                //manual document event handler gets called first then most child of react events then bubble up
+                //console.log('body click');
+        };
+        
+        document.body.addEventListener('click', onBodyClick);
         //empty array so it will only run once
+
+        //clean up function
+        return () => {
+            //reomove onBodyEventListener on clean up
+            document.body.removeEventListener('click', onBodyClick);
+        }
     }, []);
 
 
@@ -41,7 +49,7 @@ const Dropdown = ( {options, selected, onSelectedChange} ) => {
     return (
         <div ref={ref} className="ui form">
             <div className="field">
-                <label className="label">Select a Color</label>
+                <label className="label">{label}</label>
                 <div 
                   onClick={() => {
                       console.log('Dropdown clicked');

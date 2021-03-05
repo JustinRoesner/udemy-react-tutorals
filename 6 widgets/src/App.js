@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Accordion from './components/Accordion';
 import Search from './components/Search';
 import Dropdown from './components/Dropdown';
+import Translate from './components/Translate';
 
 
 const items = [
@@ -38,15 +39,13 @@ const options = [
 export default () => {
     //(options[0]) is default state
     const [selected, setSelected] = useState(options[0]);
+    //const [showDropdown, setShowDropdown] = useState(true);
 
     return (
         <div>
-            <Dropdown 
-                selected={selected} 
-                /*on  .... changed is popular convention */
-                onSelectedChange={setSelected}
-                options={options} 
-            />
+            <div>
+                <Translate />
+            </div>
         </div>
     );
 };
