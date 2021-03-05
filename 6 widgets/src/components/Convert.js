@@ -46,3 +46,5 @@ const Convert = ({ language, text }) => {
         </div>
     );
 };
+
+export default Convert;
