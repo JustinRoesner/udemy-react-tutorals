@@ -39,3 +39,5 @@ Search makes debounced requests to wikipedia. The go button takes you to the lin
 <img src="/screenshots/screenshot_6_widget_3translate.png" alt="after searching a word on search bar displays videos from youtube api"/>
 Translate uses the google translate api to convert the entered text.
 
+### `7 songs`
+Song website that uses Redux + React.
