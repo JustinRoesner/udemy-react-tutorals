@@ -40,4 +40,6 @@ Search makes debounced requests to wikipedia. The go button takes you to the lin
 Translate uses the google translate api to convert the entered text.
 
 ### `7 songs`
-Song website that uses Redux + React.
+<img src="/screenshots/screenshot_7_songs.png" alt="songs listed with a button to show their details"/>
+Song website that uses Redux + React. Displays a list of songs with a button to click to show their details.
+

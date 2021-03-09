@@ -5,7 +5,19 @@ import { connect } from 'react-redux';
 //now getting props object that has currently selected song with connect wired
 //destructure out the song from props
 const SongDetail = ({ song }) => {
-    return <div>{song.title}</div>;
+    if (!song){
+        return <div>Select a song</div>
+    }
+    return (
+        <div>
+            <h3>Details for:</h3>
+            <p>
+                Title: {song.title}
+                <br />
+                Duration: {song.duration}
+            </p>
+        </div>
+    );
 };
 
 //wrap songdetail in connect component so i can get info from redux store
