@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
+import postReducer from './postsReducer';
 
-//this tricks redux temporary that i have a valid reducer during boiler plate code
 export default combineReducers({
-    replaceMe: () => 9999
+    posts: postsReducer
 });
