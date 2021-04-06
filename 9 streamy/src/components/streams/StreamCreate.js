@@ -1,5 +1,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
+import { createStream } from '../../actions';
 
 class StreamCreate extends React.Component {
     //destructing error, and touched from meta
@@ -39,6 +41,9 @@ class StreamCreate extends React.Component {
 
     onSubmit(formValues){
         console.log(formValues);
+        //going to make a request to 3001 to the api
+        //going to call an action creator from here 
+        //npm install --save axios redux-thunk
     }
 
     render(){
