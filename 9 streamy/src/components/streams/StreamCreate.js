@@ -39,8 +39,9 @@ class StreamCreate extends React.Component {
         );
     }
 
-    onSubmit(formValues){
-        console.log(formValues);
+    onSubmit = (formValues) => {
+        this.props.createStream(formValues);
+        //console.log(formValues);
         //going to make a request to 3001 to the api
         //going to call an action creator from here 
         //npm install --save axios redux-thunk
@@ -76,8 +77,20 @@ const validate = (formValues) => {
     return errors;
 };
 
+/*
 export default reduxForm({
     form: 'streamCreate',
     validate
     //validate: validate    this is the long way
 })(StreamCreate);
+*/
+
+
+const formWrapped = reduxForm({
+    form: 'streamCreate',
+    validate
+    //validate: validate    this is the long way
+})(StreamCreate);
+
+//no mapstatetoprops function so passing null for now
+export default connect(null, { createStream })(formWrapped);
